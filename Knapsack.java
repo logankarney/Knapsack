@@ -1,3 +1,4 @@
+//References code written on the white-board in class, and pseudocode from https://www.geeksforgeeks.org/knapsack-problem/
 public class Knapsack {
 	public static int[] weight = {15,25,45,30,23,37}, value = {100,350,225,67,275,168};
 	
@@ -22,12 +23,14 @@ public class Knapsack {
 			//starts at 1 as table[0][j] will always be 0
 			for(int j = 1; j < table[i].length; j++) {
 				
-					//if the weight of the previous item is less than the current weight
+					//if the weight of the  item is less than the current weight
 					if(weight[i-1] <= j){
+						//adds the value of the item plus the old weight, or the weight in the row above
 						table[i][j] = max_value(value[i-1] + table[i-1][j-weight[i-1]], table[i-1][j]);
 					}
 					
 					else
+						//adds the weight of the row above
 						table[i][j] = table[i-1][j];
 			}
 		}
