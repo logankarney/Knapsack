@@ -1,4 +1,4 @@
-//References code written on the white-board in class, and pseudocode from https://www.geeksforgeeks.org/knapsack-problem/
+//References code written on the white-board in class, and code from https://www.geeksforgeeks.org/knapsack-problem/
 public class Knapsack {
 	public static int[] weight = {15,25,45,30,23,37}, value = {100,350,225,67,275,168};
 	
